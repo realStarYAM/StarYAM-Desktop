@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StarYAM Desktop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar" role="banner">
+    <div class="topbar__status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span class="status-time" aria-label="Heure du système">12:45</span>
+    </div>
+    <h1 class="topbar__title">StarYAM Desktop</h1>
+    <nav class="topbar__actions" aria-label="Actions rapides">
+      <button class="action-btn" type="button" aria-label="Centre de contrôle">☼</button>
+      <button class="action-btn" type="button" aria-label="Notifications">✶</button>
+      <button class="action-btn" type="button" aria-label="Recherche">⌕</button>
+    </nav>
+  </header>
+
+  <main class="workspace" role="main">
+    <section class="widget" aria-labelledby="widget-welcome">
+      <h2 id="widget-welcome">Bonjour, explorateur·rice ✨</h2>
+      <p>
+        Prêt·e à découvrir StarYAM&nbsp;? Ce bureau hybride mêle les inspirations MacOS et OneUI
+        pour une expérience fluide, lumineuse et adaptable.
+      </p>
+      <a class="cta" href="#" role="button">Démarrer la session</a>
+    </section>
+
+    <section class="widget widget--secondary" aria-labelledby="widget-meteo">
+      <h2 id="widget-meteo">Météo cosmique</h2>
+      <p>Orion · 22&nbsp;°C · Brise étoilée</p>
+      <div class="sparkline" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </section>
+
+    <section class="widget widget--secondary" aria-labelledby="widget-raccourcis">
+      <h2 id="widget-raccourcis">Raccourcis rapides</h2>
+      <ul class="shortcut-list">
+        <li><a href="#">Projets</a></li>
+        <li><a href="#">Galerie</a></li>
+        <li><a href="#">Paramètres</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="dock" role="contentinfo">
+    <button class="dock__item" type="button">Terminal</button>
+    <button class="dock__item" type="button">Explorer</button>
+    <button class="dock__item" type="button">Studio</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
