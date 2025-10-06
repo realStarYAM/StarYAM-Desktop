@@ -9,7 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="theme-auto theme-dark is-launching is-welcome">
+  <div class="splash" role="presentation" aria-hidden="true">
+    <div class="splash__glow"></div>
+    <div class="splash__logo">
+      <span class="logo-icon" aria-hidden="true">★</span>
+      <span class="logo-text">StarYAM</span>
+    </div>
+  </div>
+
   <header class="topbar" role="banner">
     <div class="topbar__status">
       <span class="status-dot" aria-hidden="true"></span>
@@ -23,14 +31,27 @@
     </nav>
   </header>
 
-  <main class="workspace" role="main">
+  <section class="welcome-screen" role="region" aria-labelledby="welcome-title">
+    <div class="welcome-screen__inner">
+      <h2 id="welcome-title">Bienvenue dans l'univers StarYAM ✨</h2>
+      <p>
+        Entre Maghreb futuriste et douceur cosmique, ce bureau réunit widgets, dock et ambiance adaptive
+        pour mieux guider tes explorations numériques.
+      </p>
+      <button class="cta" type="button" data-start>
+        Démarrer la session
+      </button>
+    </div>
+  </section>
+
+  <main class="workspace" role="main" data-desktop>
     <section class="widget" aria-labelledby="widget-welcome">
       <h2 id="widget-welcome">Bonjour, explorateur·rice ✨</h2>
       <p>
-        Prêt·e à découvrir StarYAM&nbsp;? Ce bureau hybride mêle les inspirations MacOS et OneUI
-        pour une expérience fluide, lumineuse et adaptable.
+        Prêt·e à découvrir StarYAM&nbsp;? Ce bureau hybride mêle les inspirations MacOS et OneUI pour une
+        expérience fluide, lumineuse et adaptable.
       </p>
-      <a class="cta" href="#" role="button">Démarrer la session</a>
+      <a class="cta" href="#" role="button">Lancer une mission</a>
     </section>
 
     <section class="widget widget--secondary" aria-labelledby="widget-meteo">
@@ -51,7 +72,7 @@
     </section>
   </main>
 
-  <footer class="dock" role="contentinfo">
+  <footer class="dock" role="contentinfo" data-desktop>
     <button class="dock__item" type="button">Terminal</button>
     <button class="dock__item" type="button">Explorer</button>
     <button class="dock__item" type="button">Studio</button>
